@@ -12,8 +12,5 @@
         android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_gravity="fill_horizontal|center_vertical"
-        android:foregroundGravity="center"
-        app:srcCompat="@drawable/imagen"
-        tools:src="@tools:sample/backgrounds/scenic[1]" />
+        android:src="@drawable/engineer" />
 </FrameLayout>
