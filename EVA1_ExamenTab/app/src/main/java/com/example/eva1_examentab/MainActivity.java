@@ -38,7 +38,10 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-    public void shuttle(){androidx.fragment.app.FragmentTransaction fc = getSupportFragmentManager().beginTransaction();
+
+    //fragmento de shuttle
+    public void shuttle(){
+        androidx.fragment.app.FragmentTransaction fc = getSupportFragmentManager().beginTransaction();
         fc.setCustomAnimations(android.R.anim.slide_in_left ,android.R.anim.slide_out_right);
         Shuttle shut =  new Shuttle();
         fc.replace(R.id.fragment,shut);
@@ -47,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
+    //cambiamos al fragmento de ares V
     public void ares(){
         androidx.fragment.app.FragmentTransaction fc = getSupportFragmentManager().beginTransaction();
         fc.setCustomAnimations(android.R.anim.slide_in_left ,android.R.anim.slide_out_right);
@@ -56,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
         fc.addToBackStack("holas");
         fc.commit();
     }
-
+    //cambiamos al fragmento de Falcon
     public void falcon(){
         androidx.fragment.app.FragmentTransaction fc = getSupportFragmentManager().beginTransaction();
         fc.setCustomAnimations(android.R.anim.slide_in_left ,android.R.anim.slide_out_right);
