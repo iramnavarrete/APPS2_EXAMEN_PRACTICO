@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Shuttle">
+
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:src="@drawable/shuttlee" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_weight="1"
+            android:text="Science / technology"
+            android:textColor="#0A0303" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="Space shuttle "
+            android:textAllCaps="true"
+            android:textColor="#FD000000"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="September 27, 2017 "
+            android:textColor="#FD000000"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="204dp"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:text="The space shuttle was a partially reusable low earth orbital spacecraft system operated by de U:S Nationals Aeronautics and Space Administration (NASA), as a part of the space shuttle program. Its a official program name was Space Transportation System (STS), taken from a 1969 plan for a system of reusable spacecraft of which it was the only item founded for development."
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</LinearLayout>

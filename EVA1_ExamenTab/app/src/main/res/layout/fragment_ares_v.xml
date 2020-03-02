@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AresV">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:src="@drawable/aresv" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_weight="1"
+            android:text="Science / technology"
+            android:textColor="#0A0303" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="Ares V"
+            android:textAllCaps="true"
+            android:textColor="#FD000000"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="October, 2010"
+            android:textColor="#FD000000"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="204dp"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:text="Was the planned cargo launch component of the cancelled NASA Constellation Program, which was to have replaced the  Space shuttle  after its retirement in 2011. It would also have served as the principal launcher for missions beyond the Earth-Moon system, including the program's ultimate goal, a crewed mission to Mars.
+"
+            android:textAlignment="textStart"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</LinearLayout>

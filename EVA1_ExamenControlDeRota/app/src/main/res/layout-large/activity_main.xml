@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <fragment
+        android:id="@+id/fragment7"
+        android:name="com.example.eva1_examen.imagenes"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <fragment
+            android:id="@+id/fragment10"
+            android:name="com.example.eva1_examen.BlankFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <fragment
+            android:id="@+id/fragment11"
+            android:name="com.example.eva1_examen.Imageness"
+            android:layout_width="match_parent"
+            android:layout_height="455dp" />
+    </LinearLayout>
+</LinearLayout>
