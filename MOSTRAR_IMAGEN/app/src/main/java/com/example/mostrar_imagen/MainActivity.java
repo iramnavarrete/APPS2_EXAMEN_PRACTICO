@@ -25,7 +25,10 @@ public class MainActivity extends AppCompatActivity {
 
         imagesId = new ArrayList();
         addImagesId();
+
+        // Se obtiene la orientacion actual del celular
         orientation = getResources().getConfiguration().orientation;
+
         SeekBar seekBar = findViewById(R.id.imageProgress);
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
@@ -67,7 +70,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void changeImages(int image_index){
         if(orientation == Configuration.ORIENTATION_PORTRAIT){
-            Log.i("ORIENTATION","PORTRAIT");
+            /**
+             * Cuando esta en portrait solo se muestra una imagen
+             */
 
             ImageFragment fragment = new ImageFragment();
             Bundle bundle = new Bundle();
@@ -76,8 +81,11 @@ public class MainActivity extends AppCompatActivity {
 
             changeFragment(fragment,R.id.imgFragment1);
         } else if (orientation == Configuration.ORIENTATION_LANDSCAPE){
-            Log.i("ORIENTATION","LAND SCAPE");
+            /**
+             * Cuando esta en landscape se pueden mostrar hasta 3 imagenes
+             */
 
+            // La imagen de en medio siempre se muestra. Es el index del seek bar
             ImageFragment fragment = new ImageFragment();
             Bundle bundle = new Bundle();
             bundle.putInt("image_id",imagesId.get(image_index - 1));
@@ -85,6 +93,7 @@ public class MainActivity extends AppCompatActivity {
 
             changeFragment(fragment,R.id.imgFragment2);
 
+            // Si es la primera imagen. No se debe mostrar la imagen de la izquierda
             if(image_index >= 2){
                 findViewById(R.id.imgFragment1).setVisibility(View.VISIBLE);
 
@@ -98,6 +107,7 @@ public class MainActivity extends AppCompatActivity {
                 findViewById(R.id.imgFragment1).setVisibility(View.INVISIBLE);
             }
 
+            // Si es la ultima imagen, no se debe mostrar la imagen de la derecha
             if(image_index < 10){
                 findViewById(R.id.imgFragment3).setVisibility(View.VISIBLE);
 
@@ -113,6 +123,8 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+
+    // Ayuda a hacer el cambio de los fragmentos
     private void changeFragment(Fragment fragment, int replace){
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         ft.setCustomAnimations(android.R.anim.slide_in_left,android.R.anim.slide_out_right);
